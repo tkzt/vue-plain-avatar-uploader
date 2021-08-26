@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="uploader">
+      <avatar-uploader
+        :height="150"
+        @confirm="confirm"
+        :distProps="{ backgroundColor: 'green', format: 'png', distSize: [200, 200] }"
+        :maskProps="{ maskBorderRadius: '10px' }"
+      >
+      </avatar-uploader>
+    </div>
+    <img :src="distUrl" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AvatarUploader from './components/AvatarUploader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AvatarUploader
+  },
+  data() {
+    return {
+      distUrl: ''
+    };
+  },
+  methods: {
+    confirm(url) {
+      this.distUrl = url;
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.uploader {
+  width: 400px;
+  border: 1px solid #aaa;
 }
 </style>

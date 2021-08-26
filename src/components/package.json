@@ -1,0 +1,26 @@
+{
+  "name": "vue-plain-avatar-uploader",
+  "version": "1.0.21",
+  "private": false,
+  "description": "A plain component used when setting avatar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taoqingqiu/vue-plain-avatar-uploader.git"
+  },
+  "keywords": [
+    "vue",
+    "avatar",
+    "image",
+    "cropping"
+  ],
+  "author": "taoqingqiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taoqingqiu/vue-plain-avatar-uploader/issues"
+  },
+  "homepage": "https://github.com/taoqingqiu/vue-plain-avatar-uploader#readme"
+}
