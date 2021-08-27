@@ -1,12 +1,11 @@
 <template>
   <div :style="{ height: actualHeight + 'px' }" class="container">
     <div
-      v-if="image"
       class="range-adjuster"
       ref="adjuster"
       @mouseup="onMouseUp"
       :style="{
-        'background-image': `url(${image})`,
+        'background-image': image ? `url(${image})` : 'unset',
         'background-size': `${bgImageSize[0]}px ${bgImageSize[1]}px`,
         'background-position': adjusterBgPosi,
         'background-color': adjusterBgColor
