@@ -1,6 +1,7 @@
 <template>
   <div :style="{ height: actualHeight + 'px' }" class="container">
     <div
+      v-if="image"
       class="range-adjuster"
       ref="adjuster"
       @mouseup="onMouseUp"
