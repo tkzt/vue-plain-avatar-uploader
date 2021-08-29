@@ -12,7 +12,7 @@
 
 在 vuetify 中，定制后：
 
-![](/Users/taoqingqiu/Projects/avatar-uploader/assets/in-vuetify.gif)
+![](assets/in-vuetify.gif)
 
 ## Principle & Implement
 
