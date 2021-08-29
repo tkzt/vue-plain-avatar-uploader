@@ -8,11 +8,11 @@
 
 不融入任何组件库时，头像选择器长这样：
 
-![](assets/plain.gif1)
+![](assets/plain.gif)
 
 在 vuetify 中，定制后：
 
-![](/Users/taoqingqiu/Projects/avatar-uploader/assets/in-vuetify.gif1)
+![](/Users/taoqingqiu/Projects/avatar-uploader/assets/in-vuetify.gif)
 
 ## Principle & Implement
 
