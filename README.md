@@ -16,9 +16,6 @@
 
 ## Principle & Implement
 
-原理上这个小组件没有任何技术含量：通过 flex 布局排列图像编辑区域与操作按钮区域、通过 boxShadow 实现遮罩层、通过更新 backgroundPosition 实现图片的移动等等。
+原理上这个小组件没有任何技术含量：通过 flex 布局排列图像编辑区域与操作按钮区域、通过 boxShadow 实现遮罩层、通过更新 backgroundPosition 实现图片的移动、通过 `canvas.toDataUrl` 导出图片等等。
 
 而定制化诸如 slider、button 等组件基于一系列 `slots` 以及组件 `props`，具体见[此文档](https://github.com/taoqingqiu/vue-plain-avatar-uploader/tree/main/src/components)。
-
-
-

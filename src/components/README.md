@@ -28,7 +28,7 @@ export default {
 </script>
 ```
 
-More detailed example is [here](https://github.com/taoqingqiu/vue-plain-avatar-uploader#readme).
+More detailed example is in [this REPO](https://github.com/taoqingqiu/vue-plain-avatar-uploader#readme).
 
 ## Component API
 
@@ -50,7 +50,7 @@ More detailed example is [here](https://github.com/taoqingqiu/vue-plain-avatar-u
 
 When no image is selected, there should be a button used to open file manager in preview area of mask layer.
 
-This slot only provides a function `click`, usage example in framework `[vuetify](https://vuetifyjs.com)` is below:
+This slot only provides a function `click`, an usage example in framework [vuetify](https://vuetifyjs.com) is below:
 
 ```vue
 <template>
@@ -64,7 +64,7 @@ This slot only provides a function `click`, usage example in framework `[vuetify
 
 #### action.slider
 
-So called slider is used to adjust image size, and also example is below:
+So called slider is used to adjust image size, and also an example is below:
 
 ```vue
 <template>
@@ -78,7 +78,7 @@ So called slider is used to adjust image size, and also example is below:
 
 #### action.shapeGroup
 
-Used to change shape of preview area at mask layer, example is below:
+Used to change shape of preview area at mask layer, an example is below:
 
 ```vue
 <template>
@@ -126,7 +126,7 @@ This slot provides a function `confirm`, which we will emit function 'confirm' i
 </template>
 ```
 
-### Functions
+### Events
 
 | Name    | Description                                                                          |
 | ------- | ------------------------------------------------------------------------------------ |
@@ -139,7 +139,7 @@ This slot provides a function `confirm`, which we will emit function 'confirm' i
     // color of mask layer, the default is '#00000025'
     // eg. '#00000025', 'rgba(255,255,255, 0.37)'
     shadowColor: string,
-    //border-radius of transparent area of mask
+    // border-radius of transparent area of mask
     // the default is '5px'
     // only works when shape of transparent area is set as 'square'
     squareBorderRadius: string,
@@ -164,3 +164,49 @@ This slot provides a function `confirm`, which we will emit function 'confirm' i
     backgroundColor: string,
 }
 ```
+
+## Usage of slots in vuetify
+
+For better understanding of those slots, here's one example in vuetify：
+
+```vue
+<template>
+  <avatar-uploader @confirm="confirmAvatar" hideShapeGroup :img="avatar">
+    <template #[`action.innerSelectButton`]="{ on }">
+      <v-icon v-on="on">mdi-upload</v-icon>
+    </template>
+    <template #[`action.slider`]="{ on, attrs }">
+      <v-slider v-on="on" v-bind="attrs" step="0.01" hide-details />
+    </template>
+    <template #[`action.shapeGroup`]="{ on, attrs, options }">
+      <v-radio-group @change="on.input" v-bind="attrs" row dense hide-details class="mt-0">
+        <v-radio :label="option.text" :value="option.value" v-for="(option, index) in options" :key="index"></v-radio>
+      </v-radio-group>
+    </template>
+    <template #[`action.selectButton`]="{ on, text }">
+      <v-btn v-on="on" small>{{ text }}</v-btn>
+    </template>
+    <template #[`action.confirmButton`]="{ on, attrs }">
+      <v-btn v-on="on" v-bind="attrs" small>确定</v-btn>
+    </template>
+  </avatar-uploader>
+</template>
+<script>
+export default {
+  components: {
+    AvatarUploader: () => import('vue-plain-avatar-uploader')
+  }
+  data() {
+    return {
+      avatar: 'xxx.png'
+    };
+  },
+};
+</script>
+```
+
+Result is showing up in the second GIF of REPO README.
+
+## Morover
+
+CN version is [here](https://github.com/taoqingqiu/vue-plain-avatar-uploader/tree/main/src/components/README-CN.md).
