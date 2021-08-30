@@ -2,7 +2,7 @@
 
 这个简单朴素的 Vue 组件用于，帮助我们选取、裁剪图片作为头像。
 
-## Getting Started
+## 起步
 
 首先下载此组件:
 
@@ -28,7 +28,7 @@ export default {
 </script>
 ```
 
-更详细的例子，请见 [这个仓库](https://github.com/taoqingqiu/vue-plain-avatar-uploader)。
+更详细的例子，请见[这个仓库](https://github.com/taoqingqiu/vue-plain-avatar-uploader)。
 
 ## 组件 API
 
