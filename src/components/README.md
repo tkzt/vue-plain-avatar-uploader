@@ -17,10 +17,10 @@ Secondly, import and use this component:
   <avatar-uploader />
 </template>
 <script>
-import AvatarUploader from 'vue-plain-avatar-uploader';
+import AvatarUploader from "vue-plain-avatar-uploader";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AvatarUploader
   }
@@ -84,8 +84,20 @@ Used to change shape of preview area at mask layer, an example is below:
 <template>
   <avatar-uploader>
     <template #[`action.shapeGroup`]="{ on, attrs, options }">
-      <v-radio-group @change="on.input" v-bind="attrs" row dense hide-details class="mt-0">
-        <v-radio :label="option.text" :value="option.value" v-for="(option, index) in options" :key="index"></v-radio>
+      <v-radio-group
+        @change="on.input"
+        v-bind="attrs"
+        row
+        dense
+        hide-details
+        class="mt-0"
+      >
+        <v-radio
+          :label="option.text"
+          :value="option.value"
+          v-for="(option, index) in options"
+          :key="index"
+        ></v-radio>
       </v-radio-group>
     </template>
   </avatar-uploader>
@@ -179,8 +191,20 @@ For better understanding of those slots, here's one example in vuetify：
       <v-slider v-on="on" v-bind="attrs" step="0.01" hide-details />
     </template>
     <template #[`action.shapeGroup`]="{ on, attrs, options }">
-      <v-radio-group @change="on.input" v-bind="attrs" row dense hide-details class="mt-0">
-        <v-radio :label="option.text" :value="option.value" v-for="(option, index) in options" :key="index"></v-radio>
+      <v-radio-group
+        @change="on.input"
+        v-bind="attrs"
+        row
+        dense
+        hide-details
+        class="mt-0"
+      >
+        <v-radio
+          :label="option.text"
+          :value="option.value"
+          v-for="(option, index) in options"
+          :key="index"
+        ></v-radio>
       </v-radio-group>
     </template>
     <template #[`action.selectButton`]="{ on, text }">
@@ -207,6 +231,6 @@ export default {
 
 Result is showing up in the second GIF of REPO README.
 
-## Morover
+## Moreover
 
 CN version is [here](https://github.com/taoqingqiu/vue-plain-avatar-uploader/tree/main/src/components/README-CN.md).
