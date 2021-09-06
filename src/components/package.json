@@ -1,6 +1,6 @@
 {
   "name": "vue-plain-avatar-uploader",
-  "version": "1.0.4",
+  "version": "1.0.42",
   "private": false,
   "description": "A plain component used when setting avatar.",
   "main": "index.js",
