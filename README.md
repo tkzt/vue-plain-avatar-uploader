@@ -14,7 +14,7 @@
 
 ![](assets/in-vuetify.gif)
 
-## Principle & Implement
+## 原理 & 实现
 
 原理上这个小组件没有任何技术含量：通过 flex 布局排列图像编辑区域与操作按钮区域、通过 boxShadow 实现遮罩层、通过更新 backgroundPosition 实现图片的移动、通过 `canvas.toDataUrl` 导出图片等等。
 
